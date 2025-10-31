@@ -186,7 +186,7 @@ const handleClick = () => {
   //添加当前点击时间戳
   clickTimestamps.value.push(now);
   //移除超过时间窗口的点击记录
-  clickTimestamps.value = clickTimestamps.value.filter(timestamp => now - timestamp < QUICK_CLICK_INTERVAL);
+  clickTimestamps.value = clickTimestamps.value.filter((timestamp: number) => now - timestamp < QUICK_CLICK_INTERVAL);
   //检查快速点击次数是否达到触发点
   const currentCount = clickTimestamps.value.length;
   const index = CHECK_POINTS.findIndex(point => point === currentCount);
