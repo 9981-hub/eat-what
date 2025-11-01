@@ -21,6 +21,9 @@
     "types": ["vite/client"],
     "target": "ES2015", // 显式设置目标版本（至少 ES2015）
     "lib": ["ES2015", "DOM"], // 配套的库文件
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
     
     /* Linting */
     "strict": true,
